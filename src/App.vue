@@ -1,8 +1,8 @@
 <template>
   <header>
       <!-- <Greet title="Nadfir" /> -->
-      <Greet @changeName="showData"  title="Youssef" />
-      <Test v-show="show" test="tesing here baby" />
+      <Greet @youssef="showme" @test="showData"  :title="title" />
+      <!-- <Test v-show="show" test="tesing here baby" /> -->
   </header>
 </template>
 
@@ -13,17 +13,21 @@ import Test from "./components/Test.vue" ;
 export default {
   data(){
     return {
-      show : true
+      show : true, 
+      title : "Nadir"
     }
   },
   components : {
     Greet, 
-    Test
+    Test 
   }, 
   methods : {
-    showData(data){
+    showData(){
+      // console.log(data) ;
+      this.title = "youssef test"
+    }, 
+    showme(data){
       console.log(data) ;
-      this.show = !this.show
     }
   }
 }

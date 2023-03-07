@@ -1,8 +1,8 @@
 <template>
   <div>
     <h1>Hello from {{title}}</h1>
-    <!-- <button @click="changeName">click</button> -->
-    <button @click="$emit('changeName', 'youssef')">click</button>
+    <button @click="$emit('test')">click</button>
+    <button @click="$emit('youssef', 'tesing lfdmfjgksdfml')"></button>
   </div>
 </template>
 
